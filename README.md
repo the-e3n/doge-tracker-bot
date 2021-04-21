@@ -11,6 +11,7 @@ Press Ctrl-C on the command line or send a signal to the process to stop the
 bot.
 
 # Sample Bot
+On Telegram
 @doge_tracker_bot // Please Unset after a testing time to avoid rate limiting
 
 # Usage
