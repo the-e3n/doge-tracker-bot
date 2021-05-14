@@ -25,4 +25,4 @@ def update():
     data = json.loads(response.text)
   except (ConnectionError, Timeout, TooManyRedirects) as e:
     print(e)
-  return data['market_data']['current_price']['inr']
+  return data['market_data']['current_price']['usd']
