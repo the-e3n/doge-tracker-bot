@@ -38,6 +38,7 @@ logger = logging.getLogger(__name__)
 # Define a few command handlers. These usually take the two arguments update and
 # context. Error handlers also receive the raised TelegramError object in error.
 def start(update: Update, _: CallbackContext) -> None:
+    #instanciate the bot
     update.message.reply_text('Hi! Use /set <price> to set a timer, Input price in INR to watch for. Replace <price> with INR')
 
 
@@ -55,6 +56,7 @@ def remove_job_if_exists(name: str, context: CallbackContext) -> bool:
     current_jobs = context.job_queue.get_jobs_by_name(name)
     if not current_jobs:
         return False
+    #for Job schedule removal
     for job in current_jobs:
         job.schedule_removal()
     return True
