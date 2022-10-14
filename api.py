@@ -23,6 +23,6 @@ def update():
   try:
     response = session.get(url)
     data = json.loads(response.text)
-  except (ConnectionError, Timeout, TooManyRedirects) as e:
-    print(e)
+  except (ConnectionError, Timeout, TooManyRedirects) as exception:
+    print(exception)
   return data['market_data']['current_price']['usd']
